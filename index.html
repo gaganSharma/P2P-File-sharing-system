@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>P2P File Share</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>P2P File Sharer</h1>
+
+    <div class="section">
+      <h2>Your Peer ID</h2>
+      <p id="my-peer-id">Initializing...</p>
+      <button id="copy-id-btn">Copy ID</button>
+    </div>
+
+    <hr>
+
+    <div class="section">
+      <h2>Connect to Peer & Send File</h2>
+      <input type="text" id="receiver-id-input" placeholder="Enter Receiver's Peer ID">
+      <button id="connect-btn">Connect</button>
+      <br><br>
+      <input type="file" id="file-input" disabled>
+      <button id="send-file-btn" disabled>Send File</button>
+      <p id="connection-status">Status: Not Connected</p>
+    </div>
+
+    <hr>
+
+    <div class="section">
+      <h2>Received Files</h2>
+      <div id="received-files-list">
+        <p>No files received yet.</p>
+      </div>
+      <p id="receive-status"></p>
+    </div>
+
+  </div>
+  <script type="module" src="/main.js"></script>
+</body>
+</html>
