@@ -25,15 +25,13 @@ IF NOT EXIST package.json (
 echo Installing dependencies...
 npm install
 
-IF %ERRORLEVEL% NEQ 0 (
+:: Success message
+IF %ERRORLEVEL% EQU 0 (
+    echo.
+    echo Setup complete! You can now run the app.
+    echo To start: npm start (or whatever command you use)
+) ELSE (
     echo ERROR: npm install failed. Please check your internet connection or contact the developer.
-    pause
-    exit /b
 )
-
-:: Start the development server
-echo.
-echo Starting development server...
-npm run dev
 
 pause
